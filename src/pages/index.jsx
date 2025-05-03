@@ -9,6 +9,10 @@ import { Menu } from './Components/Menu/menu';
 import { Banner } from './Components/Banner/banner';
 import { Header } from './Components/Header/header';
 
+const response = await fetch('http://localhost:4000/api/drinks');
+const json = await response.json();
+console.log(json.data)
+
 document.querySelector('#root').innerHTML = render(
   <div className="page">
     <Header />
@@ -28,11 +32,9 @@ navButton.addEventListener('click', () => {
   navElement.classList.toggle('nav-closed');
 });
 
-navElement.addEventListener('click', (event) => {
-  console.log(event.target);
+navElement.addEventListener('click', () => {
   navElement.classList.add('nav-closed');
 });
-
 
 /* 
 
