@@ -14,7 +14,7 @@ const json = await response.json();
 
 document.querySelector('#root').innerHTML = render(
   <div className="page">
-    <Header />
+    <Header showMenu={true}/>
     <main>
       <Banner />
       <Menu />
@@ -54,7 +54,4 @@ orderButton.forEach((button) => {
   });
 });
 
-/* 
 
-
-*/
