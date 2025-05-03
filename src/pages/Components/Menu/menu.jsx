@@ -15,9 +15,11 @@ export const Menu = () => (
           {json.data.map((item) => (
             <Drink
               key = {item.id}
+              id = {item.id}
               name = {item.name}
               image = {`http://localhost:4000${item.image}`}
               layers={item.layers}
+              ordered={item.ordered}
              />
           ))}
           </div>
